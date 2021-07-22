@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        button{
+            height:50px;
+            width:50px;
+            font-size: large
+        }
+    </style>
+
+    <script>
+
+
+        function inputExpression(ele) {
+
+            let inputField = document.getElementById('input');
+            inputField.value = inputField.value +"" + ele.value;
+        }
+
+        function clearField() {
+            let inputField = document.getElementById('input');
+
+            inputField.value = "";
+        }
+
+        function evaluateExp() {
+            let inputField = document.getElementById('input');
+            let ans = eval(inputField.value);
+
+            inputField.value = ans;
+        }
+
+    </script>
+</head>
+<body>
+    <div style="border:1px solid; padding:2px; width:min-content">
+        <div>
+            <input style="height:40px; width:208px; text-align:right " id="input" value=""/>
+        </div>
+        <div>
+            <div style="padding:2px">
+                <button value="1" onclick=inputExpression(this)>1</button>
+                <button value="2" onclick=inputExpression(this)>2</button>
+                <button value="3" onclick=inputExpression(this)>3</button>
+                <button value="+" onclick=inputExpression(this)>+</button>
+            </div>
+            <div style="padding:2px">
+                <button value="4" onclick=inputExpression(this)>4</button>
+                <button value="5" onclick=inputExpression(this)>5</button>
+                <button value="6" onclick=inputExpression(this)>6</button>
+                <button value="-" onclick=inputExpression(this)>-</button>
+            </div>
+            <div style="padding:2px">
+                <button value="7" onclick=inputExpression(this)>7</button>
+                <button value="8" onclick=inputExpression(this)>8</button>
+                <button value="9" onclick=inputExpression(this)>9</button>
+                <button value="*" onclick=inputExpression(this)>*</button>
+            </div>
+            <div style="padding:2px">
+                <button value="C" onclick=clearField()>C</button>
+                <button value="0" onclick=inputExpression(this)>0</button>
+                <button value="=" onclick=evaluateExp()>=</button>
+                <button value="/" onclick=inputExpression(this)>/</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

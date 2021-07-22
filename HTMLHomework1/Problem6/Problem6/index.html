@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .outer th, .outer td {
+            border: 1px solid;
+            padding: 2px;
+            height: 100px;
+            width: 100px
+        }
+
+        table {
+            border: 1px solid;
+            padding: 2px;
+        }
+
+        .inner th, .inner td {
+            border: 1px solid;
+            padding: 5px;
+            height: auto;
+            width: auto
+        }
+
+        .inner button {
+            font-size: small
+        }
+
+        button{
+            width: 100%;
+            height: 100%;
+            color: blue;
+            font-size:large
+        }
+
+    </style>
+    <script>
+        function redirect() {
+            location.href = "https://antra.net/";
+        }
+    </script>
+</head>
+<body>
+    <table class="outer">
+        <tr><th colspan="4"><button onclick=redirect()><h1>Antra LIFE</h1></button></th></tr>
+        <tr>
+            <td colspan="2"><button onclick=redirect()>Google</button></td>
+            <td colspan="2"><button onclick=redirect()>GitHub</button></td>
+        </tr>
+        <tr>
+            <td ><button onclick=redirect()>FB</button></td>
+            <td ><button onclick=redirect()>GMail</button></td>
+            <td ><button onclick=redirect()>YouTube</button></td>
+            <td><button onclick=redirect()>2048</button></td>
+        </tr>
+        <tr>
+            <td ><button onclick=redirect()>Food</button></td>
+            <td colspan="2" ><button onclick=redirect()>Game</button></td>
+            <td align="center">
+                <table class="inner" height="100%">
+                    <tr><td><button onclick=redirect()>Social Life</button></td></tr>
+                    <tr><td><button onclick=redirect()>Sleep</button></td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" ><button onclick=redirect() style="text-align:right"><h2>Beer >>></h2></button></td>
+            <td><button onclick=redirect()>WC</button></td>
+        </tr>
+    </table>
+</body>
+</html>
